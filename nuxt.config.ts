@@ -4,5 +4,15 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   serverDir: 'server/',
   ssr: true,
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  modules: [
+      '@nuxtjs/tailwindcss',
+      '@nuxt/eslint'
+  ],
+  eslint: {
+    //options
+    config: {
+      stylistic: true // <---
+    }
+  }
 })
